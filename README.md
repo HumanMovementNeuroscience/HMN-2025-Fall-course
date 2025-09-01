@@ -1,13 +1,11 @@
 # HMN-2025-Fall-course: Neural Control of Real-World Human Movement
 
 ## Instructor: Jonathan Samir Matthis
-
-**Course Dates**: 05 Sept 2025 - 07 Dec 2025
-**Course Time**: Tues/Fri 1:35-3:15
-**Course Location**: (on canvas)
+- **Course Dates**: 01 Sept 2025 - 07 Dec 2025
+- **Course Time**: Tues/Fri 1:35-3:15
+- **Course Location**: (on canvas)
 
 ### Course Materials and Resources
-
 - Discord Server: (Invite on Canvas)
 - Canvas page - https://northeastern.instructure.com/courses/224091
 - Youtube playlist - https://www.youtube.com/playlist?list=PLWxH2Ov17q5G4e5cfwz1j2KHoiWAAWBIT
@@ -15,23 +13,39 @@
 
 ## Schedule Overview
 
-| Date (Monday) | Week    | Lecture (Mon)                       | Lab (Weds)                 |
-|---------------|---------|-------------------------------------|----------------------------|
-| 06 Jan 2025   | Week 1  | Intro/Setup                         | HMN Overview               |
-| 13 Jan 2025   | Week 2  | Library Resources Presentation      | Topic Planning             |
-| 20 Jan 2025   | Week 3  | MLK DAY                             | Group thing w/ bot         |
-| 27 Jan 2025   | Week 4  | Intro to Measurement                | FreeMoCap In Class Rec     |
-| 03 Feb 2025   | Week 5  | Look at Balance Data                | Look at Jumping data       |
-| 10 Feb 2025   | Week 6  | Scientific Psters and Spinal CPGS   | Paper state space activity |
-| 17 Feb 2025   | Week 7  | PRESIDENT DAY                       | Poster Outline activity    |
-| 24 Feb 2025   | Week 8  | Vision and Eyeballs                 | AI/Bot check-in            |
-| 03 Mar 2025   | Week 9  | SPRING BREAK                        | SPRING BREAK               |
-| 10 Mar 2025   | Week 10 | Eye tracking Demo                   | Bees, Ants, & Dragonflies  |
-| 17 Mar 2025   | Week 11 | Eye Tracking data                   | ? Gap filling (Neurons)    |
-| 24 Mar 2025   | Week 12 | ? Poster Prep (UPLOAD)              | Evolution                  |
-| 31 Mar 2025   | Week 13 | ? ans & ptsd                        | ? Poster practice          |
-| 07 Apr 2025   | Week 14 | POSTER PRESENTATION DAY 1           | POSTER PRESENTATION DAY 2  |
-| 14 Apr 2025   | Week 15 | My dumb bs                          | Wrap up/Retrospective      |
+| Date          | Class #   | Week #  | Day           | Class title                      |
+|---------------|---------- |---------|---------------|----------------------------------|
+| 05 Sep 2025   | Class 1   | Week 1  | Friday        | Intro to The Situation           | 
+| 09 Sep 2025   | Class 2   | Week 2  | Tuesday       | TBD                              |
+| 12 Sep 2025   | Class 3   | Week 2  | Friday        | TBD                              |
+| 16 Sep 2025   | Class 4   | Week 3  | Tuesday       | TBD                              |
+| 19 Sep 2025   | Class 5   | Week 3  | Friday        | TBD                              |
+| 23 Sep 2025   | Class 6   | Week 4  | Tuesday       | TBD                              |
+| 26 Sep 2025   | Class 7   | Week 4  | Friday        | TBD                              |
+| 30 Sep 2025   | Class 8   | Week 5  | Tuesday       | TBD                              |
+|---------------|---------- |---------|---------------|----------------------------------|
+| 03 Oct 2025   | Class 9   | Week 5  | Friday        | TBD                              |
+| 07 Oct 2025   | Class 10  | Week 6  | Tuesday       | TBD                              |
+| 10 Oct 2025   | Class 11  | Week 6  | Friday        | TBD                              |
+| 14 Oct 2025   | Class 12  | Week 7  | Tuesday       | TBD                              |
+| 17 Oct 2025   | Class 13  | Week 7  | Friday        | TBD                              |
+| 21 Oct 2025   | Class 14  | Week 8  | Tuesday       | TBD                              |
+| 24 Oct 2025   | Class 15  | Week 8  | Friday        | TBD                              |
+| 28 Oct 2025   | Class 16  | Week 9  | Tuesday       | TBD                              |
+| 31 Oct 2025   | Class 17  | Week 9  | Friday        | TBD                              |
+|---------------|---------- |---------|---------------|----------------------------------|
+| 04 Nov 2025   | Class 18  | Week 10 | Tuesday       | TBD                              |
+| 07 Nov 2025   | Class 19  | Week 10 | Friday        | TBD                              |
+| 11 Nov 2025   | Class 20  | Week 11 | Tuesday       | NO CLASS  - VETERAN'S DAY        |
+| 14 Nov 2025   | Class 21  | Week 11 | Friday        | TBD                              |
+| 18 Nov 2025   | Class 22  | Week 12 | Tuesday       | TBD                              |
+| 21 Nov 2025   | Class 23  | Week 12 | Friday        | TBD                              |
+| 25 Nov 2025   | Class 24  | Week 13 | Tuesday       | TBD                              |
+| 28 Nov 2025   | Class 25  | Week 13 | Friday        | NO CLASS - FALL BREAK            |
+|---------------|---------- |---------|---------------|----------------------------------|
+| 02 Dec 2025   | Class 26  | Week 14 | Tuesday       | TBD                              |
+| 05 Dec 2025   | Class 27  | Week 14 | Friday        | TBD                              |
+
 
 ## Course Description
 
@@ -72,6 +86,16 @@ executing technology-driven research projects while examining the impact of stru
 
 At the end of the semester, you will present (individually or with a group, depending on your preference) a poster at a
 Symposium event designed to mimic a poster presentation session at a scientific conference. This Symposium will be
+attended by all 10+ sections of Biol2299 - It’s super fun! Your poster assignment is the Big Assignment for this course,
+but don't worry about it. You'll be fine :)
+
+### Other Assignments
+
+There will also be a number of relatively casual assignments throughout the semester that will be explained as they come
+up.
+
+These assignments will be all be mechanical/checkboxy in nature, i.e.  "Have a chat with the bot in #XYZ channel for at
+least `n` messages" or "Have at least `X` citations logged in your Zotero bibliography" etc. 
 attended by all 10+ sections of Biol2299 - It’s super fun! Your poster assignment is the Big Assignment for this course,
 but don't worry about it. You'll be fine :)
 
