@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 260d212a-e91f-4ce0-9eb9-245c03fa7ce0
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/HumanMovementNeuroscience/HMN-2025-Fall-course
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
