@@ -9,7 +9,7 @@
 - Discord Server: (Invite on Canvas)
 - Canvas page - https://northeastern.instructure.com/courses/224091
 - Youtube playlist - https://www.youtube.com/playlist?list=PLWxH2Ov17q5G4e5cfwz1j2KHoiWAAWBIT
-- Course website: [TBA]
+- Course website: https://humanmovementneuroscience.github.io/HMN-2025-Fall-course/
 
 ## Schedule Overview
 
@@ -23,7 +23,7 @@
 | 23 Sep 2025   | Class 6   | Week 4  | Tuesday       | TBD                              |
 | 26 Sep 2025   | Class 7   | Week 4  | Friday        | TBD                              |
 | 30 Sep 2025   | Class 8   | Week 5  | Tuesday       | TBD                              |
-|---------------|---------- |---------|---------------|----------------------------------|
+|_______________|___________|_________|_______________|__________________________________|
 | 03 Oct 2025   | Class 9   | Week 5  | Friday        | TBD                              |
 | 07 Oct 2025   | Class 10  | Week 6  | Tuesday       | TBD                              |
 | 10 Oct 2025   | Class 11  | Week 6  | Friday        | TBD                              |
@@ -33,7 +33,7 @@
 | 24 Oct 2025   | Class 15  | Week 8  | Friday        | TBD                              |
 | 28 Oct 2025   | Class 16  | Week 9  | Tuesday       | TBD                              |
 | 31 Oct 2025   | Class 17  | Week 9  | Friday        | TBD                              |
-|---------------|---------- |---------|---------------|----------------------------------|
+|_______________|___________|_________|_______________|__________________________________|
 | 04 Nov 2025   | Class 18  | Week 10 | Tuesday       | TBD                              |
 | 07 Nov 2025   | Class 19  | Week 10 | Friday        | TBD                              |
 | 11 Nov 2025   | Class 20  | Week 11 | Tuesday       | NO CLASS  - VETERAN'S DAY        |
@@ -42,7 +42,7 @@
 | 21 Nov 2025   | Class 23  | Week 12 | Friday        | TBD                              |
 | 25 Nov 2025   | Class 24  | Week 13 | Tuesday       | TBD                              |
 | 28 Nov 2025   | Class 25  | Week 13 | Friday        | NO CLASS - FALL BREAK            |
-|---------------|---------- |---------|---------------|----------------------------------|
+|_______________|___________|_________|_______________|__________________________________|
 | 02 Dec 2025   | Class 26  | Week 14 | Tuesday       | TBD                              |
 | 05 Dec 2025   | Class 27  | Week 14 | Friday        | TBD                              |
 
