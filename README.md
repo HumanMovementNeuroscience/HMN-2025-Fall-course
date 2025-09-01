@@ -13,22 +13,22 @@
 
 ## Schedule Overview
 
-| Week # | Week Start | Tuesday (LAB)                                  | Friday (LECTURE)                         |
-|--------|------------|------------------------------------------------|------------------------------------------|
-| Week 1 | 01 Sep     | ------                                         | 05 Sep - Class 1: Intro to The Situation |
-| Week 2 | 08 Sep     | 09 Sep - Class 2:  Lab 1                       | 12 Sep - Class 3: TBD                    |
-| Week 3 | 15 Sep     | 16 Sep - Class 4:  Lab 2                       | 19 Sep - Class 5: TBD                    |
-| Week 4 | 22 Sep     | 23 Sep - Class 6:  Lab 3                       | 26 Sep - Class 7: TBD                    |
-| Week 5 | 29 Sep     | 30 Sep - Class 8:  Lab 4                       | 03 Oct - Class 9: TBD                    |
-| Week 6 | 06 Oct     | 07 Oct - Class 10: Lab 5                       | 10 Oct - Class 11: TBD                   |
-| Week 7 | 13 Oct     | 14 Oct - Class 12: Lab 6                       | 17 Oct - Class 13: TBD                   |
-| Week 8 | 20 Oct     | 21 Oct - Class 14: Lab 7                       | 24 Oct - Class 15: TBD                   |
-| Week 9 | 27 Oct     | 28 Oct - Class 16: Lab 8                       | 31 Oct - Class 17: TBD                   |
-| Week 10| 03 Nov     | 04 Nov - Class 18: Lab 9                       | 07 Nov - Class 19: TBD                   |
-| Week 11| 10 Nov     | 11 Nov - Class 20: NO CLASS - VETERAN'S DAY    | 14 Nov - Class 21: TBD                   |
-| Week 12| 17 Nov     | 18 Nov - Class 22: Lab 10                      | 21 Nov - Class 23: TBD                   |
-| Week 13| 24 Nov     | 25 Nov - Class 24: Lab 11                      | 28 Nov - Class 25: NO CLASS - FALL BREAK |
-| Week 14| 01 Dec     | 02 Dec - Class 26: Lab 12                      | 05 Dec - Class 27: TBD                   |
+| Week # | Week Start | Tuesday (LAB)               | Friday (LECTURE)                                                            |
+|--------|------------|-----------------------------|-----------------------------------------------------------------------------|
+| Week 1 | 01 Sep     | 02 Sep - NO CLASS           | 05 Sep - Class 1:  Lecture 1 - Intro to The Situation                       |
+| Week 2 | 08 Sep     | 09 Sep - Class 2:  Lab 1    | 12 Sep - Class 3:  Lecture 2 - WTF is AI?                                   |
+| Week 3 | 15 Sep     | 16 Sep - Class 4:  Lab 2    | 19 Sep - Class 5:  Lecture 3 - How to FreeMoCap                             |
+| Week 4 | 22 Sep     | 23 Sep - Class 6:  Lab 3    | 26 Sep - Class 7:  Lecture 4 - How to Measure the World                     |
+| Week 5 | 29 Sep     | 30 Sep - Class 8:  Lab 4    | 03 Oct - Class 9:  Lecture 5 - Center of Mass & Movement analysis           |
+| Week 6 | 06 Oct     | 07 Oct - Class 10: Lab 5    | 10 Oct - Class 11: Lecture 6 - Light, Vision, and Eyeballs                  |
+| Week 7 | 13 Oct     | 14 Oct - Class 12: Lab 6    | 17 Oct - Class 13: Lecture 7 - Gaze and Oculomotor control                  |
+| Week 8 | 20 Oct     | 21 Oct - Class 14: Lab 7    | 24 Oct - Class 15: Lecture 8 - A brief history of laser skeletons           |
+| Week 9 | 27 Oct     | 28 Oct - Class 16: Lab 8    | 31 Oct - Class 17: Lecture 9 - The Para/Sympathetic Nervous systems         |
+| Week 10| 03 Nov     | 04 Nov - Class 18: Lab 9    | 07 Nov - Class 19: Lecture 10 - TBD                                         |
+| Week 11| 10 Nov     | 11 Nov - NO CLASS           | 14 Nov - Class 21: Lecture 10 - TBD                                         |
+| Week 12| 17 Nov     | 18 Nov - Class 22: Lab 10   | 21 Nov - Class 23: Lecture 12 - TBD                                         |
+| Week 13| 24 Nov     | 25 Nov - Class 24: Lab 11   | 28 Nov - NO CLASS - FALL BREAK                                              |
+| Week 14| 01 Dec     | 02 Dec - Class 25: Lab 12   | 05 Dec - Class 26: Lecture 13 - Wrap up!                                    |
 
 
 ## Course Description
