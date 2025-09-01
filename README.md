@@ -13,38 +13,22 @@
 
 ## Schedule Overview
 
-| Date          | Class #   | Week #  | Day           | Class title                      |
-|---------------|---------- |---------|---------------|----------------------------------|
-| 05 Sep 2025   | Class 1   | Week 1  | Friday        | Intro to The Situation           | 
-| 09 Sep 2025   | Class 2   | Week 2  | Tuesday       | TBD                              |
-| 12 Sep 2025   | Class 3   | Week 2  | Friday        | TBD                              |
-| 16 Sep 2025   | Class 4   | Week 3  | Tuesday       | TBD                              |
-| 19 Sep 2025   | Class 5   | Week 3  | Friday        | TBD                              |
-| 23 Sep 2025   | Class 6   | Week 4  | Tuesday       | TBD                              |
-| 26 Sep 2025   | Class 7   | Week 4  | Friday        | TBD                              |
-| 30 Sep 2025   | Class 8   | Week 5  | Tuesday       | TBD                              |
-|_______________|___________|_________|_______________|__________________________________|
-| 03 Oct 2025   | Class 9   | Week 5  | Friday        | TBD                              |
-| 07 Oct 2025   | Class 10  | Week 6  | Tuesday       | TBD                              |
-| 10 Oct 2025   | Class 11  | Week 6  | Friday        | TBD                              |
-| 14 Oct 2025   | Class 12  | Week 7  | Tuesday       | TBD                              |
-| 17 Oct 2025   | Class 13  | Week 7  | Friday        | TBD                              |
-| 21 Oct 2025   | Class 14  | Week 8  | Tuesday       | TBD                              |
-| 24 Oct 2025   | Class 15  | Week 8  | Friday        | TBD                              |
-| 28 Oct 2025   | Class 16  | Week 9  | Tuesday       | TBD                              |
-| 31 Oct 2025   | Class 17  | Week 9  | Friday        | TBD                              |
-|_______________|___________|_________|_______________|__________________________________|
-| 04 Nov 2025   | Class 18  | Week 10 | Tuesday       | TBD                              |
-| 07 Nov 2025   | Class 19  | Week 10 | Friday        | TBD                              |
-| 11 Nov 2025   | Class 20  | Week 11 | Tuesday       | NO CLASS  - VETERAN'S DAY        |
-| 14 Nov 2025   | Class 21  | Week 11 | Friday        | TBD                              |
-| 18 Nov 2025   | Class 22  | Week 12 | Tuesday       | TBD                              |
-| 21 Nov 2025   | Class 23  | Week 12 | Friday        | TBD                              |
-| 25 Nov 2025   | Class 24  | Week 13 | Tuesday       | TBD                              |
-| 28 Nov 2025   | Class 25  | Week 13 | Friday        | NO CLASS - FALL BREAK            |
-|_______________|___________|_________|_______________|__________________________________|
-| 02 Dec 2025   | Class 26  | Week 14 | Tuesday       | TBD                              |
-| 05 Dec 2025   | Class 27  | Week 14 | Friday        | TBD                              |
+| Week # | Week Start | Tuesday (LAB)                                  | Friday (LECTURE)                         |
+|--------|------------|------------------------------------------------|------------------------------------------|
+| Week 1 | 01 Sep     | ------                                         | 05 Sep - Class 1: Intro to The Situation |
+| Week 2 | 08 Sep     | 09 Sep - Class 2:  Lab 1                       | 12 Sep - Class 3: TBD                    |
+| Week 3 | 15 Sep     | 16 Sep - Class 4:  Lab 2                       | 19 Sep - Class 5: TBD                    |
+| Week 4 | 22 Sep     | 23 Sep - Class 6:  Lab 3                       | 26 Sep - Class 7: TBD                    |
+| Week 5 | 29 Sep     | 30 Sep - Class 8:  Lab 4                       | 03 Oct - Class 9: TBD                    |
+| Week 6 | 06 Oct     | 07 Oct - Class 10: Lab 5                       | 10 Oct - Class 11: TBD                   |
+| Week 7 | 13 Oct     | 14 Oct - Class 12: Lab 6                       | 17 Oct - Class 13: TBD                   |
+| Week 8 | 20 Oct     | 21 Oct - Class 14: Lab 7                       | 24 Oct - Class 15: TBD                   |
+| Week 9 | 27 Oct     | 28 Oct - Class 16: Lab 8                       | 31 Oct - Class 17: TBD                   |
+| Week 10| 03 Nov     | 04 Nov - Class 18: Lab 9                       | 07 Nov - Class 19: TBD                   |
+| Week 11| 10 Nov     | 11 Nov - Class 20: NO CLASS - VETERAN'S DAY    | 14 Nov - Class 21: TBD                   |
+| Week 12| 17 Nov     | 18 Nov - Class 22: Lab 10                      | 21 Nov - Class 23: TBD                   |
+| Week 13| 24 Nov     | 25 Nov - Class 24: Lab 11                      | 28 Nov - Class 25: NO CLASS - FALL BREAK |
+| Week 14| 01 Dec     | 02 Dec - Class 26: Lab 12                      | 05 Dec - Class 27: TBD                   |
 
 
 ## Course Description
