@@ -1,0 +1,1579 @@
+{
+  "summary": {
+    "transcript_title": "Eye Tracking Data and Methodology",
+    "transcript_title_slug": "eye-tracking-data-and-methodology",
+    "one_sentence_summary": "This video series comprehensively explores the collection, processing, analysis, and technical considerations involved in eye tracking research, emphasizing data quality, coordinate systems, modern techniques, and scientific rigor.",
+    "executive_summary": "The series provides an in-depth overview of eye tracking, covering topics from raw data collection using infrared cameras to advanced analysis methods. It discusses data processing challenges, the importance of coordinate conventions across disciplines, and the limitations of current technological capabilities, notably in measuring eye torsion. The narrative emphasizes the significance of understanding data abstractions, the scale of digital data, and the role of machine learning in improving measurement accuracy. Throughout, it underscores the balance between ideal scientific precision and practical, real-world constraints, advocating for a nuanced understanding of data quality and interpretation.",
+    "topics_detailed_summary": "The video series systematically examines the entire process of eye tracking research. It begins by introducing collected eye movement data and the class schedule, emphasizing the importance of data sharing and upcoming project deadlines. It then delves into the methodology of collecting raw eye movement signals, highlighting the use of infrared cameras, lighting setup, and iterative practice necessary to refine data quality. The discussion covers the importance of understanding camera timestamps and frame rate variations, which impact measurement precision for both physics and neuroscience applications, stressing the need to match data fidelity to research goals. Additionally, the complexity of digital image data is explored, including pixel representation, noise, data size, and the limits of digital sensors in replicating real-world detail. The lecture emphasizes the importance of coordinate systems—geometric and cultural—as they influence data interpretation and highlights the significance of image compression techniques that manage large data volumes. The analysis then shifts to data management practices, differentiating raw data (videos, timestamps) from processed variables (gaze positions, confidence scores), and critically discusses the trustworthiness of AI-based confidence measures, illustrating potential vulnerabilities. Advanced modeling of eye movement, especially 3D spherical models involving torsion and azimuth/elevation coordinates, is examined, illustrating how calibration and geometric transformations enable accurate gaze estimation. The series concludes by reflecting on the limitations of current eye-tracking technology in measuring eye torsion, advocating for machine learning enhancements and more precise tools, ultimately emphasizing the balance between scientific idealism and practical technology constraints.",
+    "covered_topics_outline": [
+      {
+        "topic": "Eye Tracking Data",
+        "topic_overview": "Overview of recent data collection, processing, and sharing, along with project schedule and future topics.",
+        "subtopics": [
+          {
+            "subtopic": "Data Processing and Visualization",
+            "details": [
+              "Processing of last week's collected eye tracking data",
+              "Data visualization and current state of data quality"
+            ]
+          },
+          {
+            "subtopic": "Data Storage and Access",
+            "details": [
+              "Upload to Google Drive and sharing with students"
+            ]
+          },
+          {
+            "subtopic": "Course Schedule and Assignments",
+            "details": [
+              "Poster preparation and submission guidelines",
+              "Timelines for presentation practice",
+              "Upcoming lectures on neural cells, evolution, and the autonomic nervous system",
+              "Final class activities and reflection"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Eye Tracking Data and Methodology",
+        "topic_overview": "Discussion of data collection processes, technical setup, and iterative improvement in eye tracking.",
+        "subtopics": [
+          {
+            "subtopic": "Raw Data Quality",
+            "details": [
+              "Appearance of raw eye tracking data",
+              "Issues caused by lighting and shadowing",
+              "Variability based on setup adjustments"
+            ]
+          },
+          {
+            "subtopic": "Technical Setup and Equipment",
+            "details": [
+              "Infrared cameras and illuminators",
+              "Frame rates (~120 fps) for precise tracking",
+              "Comparison with standard video frame rates (30-60 fps)"
+            ]
+          },
+          {
+            "subtopic": "Learning and Expertise",
+            "details": [
+              "Iterative practice improves data capture",
+              "Recognizing subtle data issues with experience",
+              "Skill development over time"
+            ]
+          },
+          {
+            "subtopic": "Broader Context of Data Capture",
+            "details": [
+              "Comparing eye tracking with motion capture techniques",
+              "Understanding data and frame rate implications"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Understanding Camera Timestamp Data and Precision",
+        "topic_overview": "Explores how timestamp accuracy affects data analysis and the importance of understanding system limitations.",
+        "subtopics": [
+          {
+            "subtopic": "Camera Timestamps",
+            "details": [
+              "Most consumer cameras produce approximate timestamps based on frame counts",
+              "Real timestamps are often not directly recorded"
+            ]
+          },
+          {
+            "subtopic": "Frame Rate Variations",
+            "details": [
+              "Small timing differences (9-11 ms) impact high-precision studies",
+              "Relevance for physics and neural data decoding"
+            ]
+          },
+          {
+            "subtopic": "Application and Noise",
+            "details": [
+              "Precision needed varies by application",
+              "In neuroscience, sub-millisecond accuracy is often required",
+              "Balancing ideal and actual data quality is key"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Understanding Basic Video Data and Camera Sensors",
+        "topic_overview": "Fundamentals of digital images, pixel data, sensor limitations, and data volume considerations.",
+        "subtopics": [
+          {
+            "subtopic": "Data Quality and Noise",
+            "details": [
+              "Noisy data is valuable for learning mechanisms"
+            ]
+          },
+          {
+            "subtopic": "Camera Data Basics",
+            "details": [
+              "Images as 400x400 pixel grids with values between 0-1",
+              "Pixels represent voltage outputs, analog-to-digital conversion is approximate"
+            ]
+          },
+          {
+            "subtopic": "Data Size and Rate",
+            "details": [
+              "High-resolution, high-frame-rate data generates massive volumes",
+              "Limited in representing real-world detail despite technological advances"
+            ]
+          },
+          {
+            "subtopic": "Limitations and Reality",
+            "details": [
+              "Digital images are a simplified shadow of the environment",
+              "Cannot fully capture scene complexity"
+            ]
+          },
+          {
+            "subtopic": "Implications for Data Analysis",
+            "details": [
+              "Raw pixel data provides basic features, deeper insights require advanced analysis"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Understanding Camera Coordinates and Data Conventions in Eye Tracking",
+        "topic_overview": "Examines coordinate systems, both geometric and cultural, in data interpretation.",
+        "subtopics": [
+          {
+            "subtopic": "Coordinate Systems and Conventions",
+            "details": [
+              "Camera coordinates fixed relative to head, with origin at top-left"
+            ]
+          },
+          {
+            "subtopic": "Disciplinary Variations",
+            "details": [
+              "Biomechanics, vision science, and VR use different axes and conventions",
+              "Cultural conventions influence standard practices"
+            ]
+          },
+          {
+            "subtopic": "Protocols and Data Formats",
+            "details": [
+              "Standard data formats depend on accepted conventions",
+              "Breaking conventions can lead to processing errors"
+            ]
+          },
+          {
+            "subtopic": "Image Compression Techniques",
+            "details": [
+              "Region-based compression (JPEG, PNG) exploits redundancy to reduce storage"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Data Compression and Computer Vision Techniques",
+        "topic_overview": "Discusses data compression methods and the analysis of eye images using classical and neural network approaches.",
+        "subtopics": [
+          {
+            "subtopic": "Data Compression",
+            "details": [
+              "Lossy methods (JPEG) vs lossless (PNG)"
+            ]
+          },
+          {
+            "subtopic": "Computer Vision Approaches",
+            "details": [
+              "Deep learning with CNNs for object recognition",
+              "Classical methods analyze raw pixel features such as luminance gradients"
+            ]
+          },
+          {
+            "subtopic": "Eye-Tracking Data Processing",
+            "details": [
+              "Detecting pupils via pixel intensity and ellipse fitting",
+              "Using pupil data (X, Y, diameter) for gaze analysis"
+            ]
+          },
+          {
+            "subtopic": "Priorities in Eye Data",
+            "details": [
+              "Choice of position vs. size depends on research goals",
+              "Eye as sphere connected to head, head movement affects measurements"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Understanding Eye Rotation and Torsion in Eye-Tracking",
+        "topic_overview": "Explores the mechanics of eye movement, coordinate systems, and the measurement challenges of torsion.",
+        "subtopics": [
+          {
+            "subtopic": "Eye Movement Mechanics",
+            "details": [
+              "Attachment of eye to head",
+              "Rotation along various axes",
+              "Ocular torsion importance"
+            ]
+          },
+          {
+            "subtopic": "Coordinate Systems for Eye Data",
+            "details": [
+              "Cartesian and polar coordinate representations",
+              "Azimuth and elevation angles"
+            ]
+          },
+          {
+            "subtopic": "Measurement Challenges",
+            "details": [
+              "Current tech struggles with direct torsion measurement",
+              "Head rotation can induce torsion effects",
+              "Need for more precise tools in neuroscience"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Eye Tracking and Data Reduction Techniques",
+        "topic_overview": "Addresses technological limits in measuring torsion, machine learning in data analysis, and the vast scale of image data.",
+        "subtopics": [
+          {
+            "subtopic": "Technology Limitations",
+            "details": [
+              "High-precision eye trackers are impractical for routine use",
+              "Feature tracking for iris torsion remains difficult"
+            ]
+          },
+          {
+            "subtopic": "Data Reduction Strategies",
+            "details": [
+              "Raw image data (~160,000 dims) reduced to X and Y positions"
+            ]
+          },
+          {
+            "subtopic": "Data Scale and Storage",
+            "details": [
+              "Massive data volume—gigabytes to petabytes—necessitates abstracted features"
+            ]
+          },
+          {
+            "subtopic": "Machine Learning Potential",
+            "details": [
+              "Leveraging AI to improve torsion measurement and image analysis"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Data and Data Management in Eye Tracking",
+        "topic_overview": "Discusses raw vs. derived data, file organization, confidence scores, and data trustworthiness.",
+        "subtopics": [
+          {
+            "subtopic": "Data Size and Storage",
+            "details": [
+              "Growth from KBs to exabytes illustrates data scale"
+            ]
+          },
+          {
+            "subtopic": "Raw vs Derived Data",
+            "details": [
+              "Raw data includes videos and timestamps, non-reconstructible",
+              "Derived data includes gaze points, blink, confidence scores"
+            ]
+          },
+          {
+            "subtopic": "AI Confidence and Trustworthiness",
+            "details": [
+              "AI confidence values can be manipulated or unreliable",
+              "Understanding AI limitations is critical in interpretation"
+            ]
+          },
+          {
+            "subtopic": "File Formats and Management",
+            "details": [
+              "Use of CSV, TSV, and clear folder structures for organization"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "3D Spherical Model and Eye Tracking",
+        "topic_overview": "Describes geometric modeling of eye movements in 3D, including ellipse measurements and coordinate systems.",
+        "subtopics": [
+          {
+            "subtopic": "3D Eye Model",
+            "details": [
+              "Ellipse and circle parameters on the sphere",
+              "Use of azimuth and elevation angles"
+            ]
+          },
+          {
+            "subtopic": "Coordinate Transformations",
+            "details": [
+              "Theta phi (azimuth/elevation) vs. theta rho",
+              "Calibration between eye and world cameras"
+            ]
+          },
+          {
+            "subtopic": "Application in Gaze Estimation",
+            "details": [
+              "Mapping 2D ellipse data into 3D space",
+              "Calibration processes for accurate modeling"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "chunk_analyses": [
+    {
+      "summary": {
+        "transcript_title": "Introduction to Eye Tracking Data and Class Schedule",
+        "transcript_title_slug": "introduction-to-eye-tracking-data-and-class-schedule",
+        "one_sentence_summary": "The speaker introduces the eye tracking data recorded last week, discusses data processing, shares the class schedule, and provides an overview of the upcoming topics and assignments.",
+        "executive_summary": "In this video segment, the instructor talks about the recent eye tracking data collected and processed, explaining its current state and how it will be shared. The session also covers the class schedule, including upcoming poster presentations, final projects, and a reflection on the course content. Additionally, there is a discussion on the structure of scientific data files, with emphasis on understanding the core data versus metadata, and the initial exploration of the raw eye tracking data files.",
+        "topics_detailed_summary": "The instructor begins by discussing the processing and visualization of the eye tracking data collected the previous week, noting that the quality of the data is somewhat imperfect but sufficient for illustrating key points about eye movements. The data is being uploaded to Google Drive and will be shared with students. The class schedule is then outlined, including a focus on poster preparation, final project submissions, practice presentations, and upcoming lectures on neural cells, evolution, and the autonomic nervous system. The instructor emphasizes the importance of timely submission of the posters and preparation for the final presentation. A transition to discussing the raw data files occurs, highlighting that scientific recording data often appears as a collection of complex, unfamiliar files. The instructor explains that in this particular data dump, the core data includes eye tracker recordings (i0i1) and video files (world MP4), which are crucial for analysis. The video files can be played directly from the folder, and there is mention of examining the data model, which includes naming conventions but varies in content across datasets.",
+        "covered_topics_outline": [
+          {
+            "topic": "Eye Tracking Data",
+            "topic_overview": "Discussion of recent eye tracking data, its processing, quality, and how it will be shared.",
+            "subtopics": [
+              {
+                "subtopic": "Data Processing and Visualization",
+                "details": [
+                  "Processing of last week's collected eye tracking data",
+                  "Data visualization and current state of data quality"
+                ]
+              },
+              {
+                "subtopic": "Data Storage and Access",
+                "details": [
+                  "Upload to Google Drive and sharing with students"
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Course Schedule and Assignments",
+            "topic_overview": "Overview of upcoming class activities, poster presentations, final projects, and lectures.",
+            "subtopics": [
+              {
+                "subtopic": "Poster Preparation and Submission",
+                "details": [
+                  "Guidelines for final poster upload",
+                  "Timelines for submission and practice presentations"
+                ]
+              },
+              {
+                "subtopic": "Future Lectures and Topics",
+                "details": [
+                  "Neural cell types, including neuron specifics",
+                  "Evolutionary context, autonomic nervous system, PTSD"
+                ]
+              },
+              {
+                "subtopic": "Final Class and Wrap-up",
+                "details": [
+                  "Final presentations, course reflection, and instructor's research overview"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Data visualization and sharing",
+        "Course scheduling and assessments",
+        "Understanding scientific data files"
+      ],
+      "key_takeaways": [
+        "The eye tracking data was processed and shared via Google Drive.",
+        "The class schedule includes poster presentations, final projects, and lectures on neuroscience topics.",
+        "Scientific data files often contain a mix of core data and metadata, which need to be distinguished.",
+        "The core data for the eye tracking study includes video recordings and eye movement files.",
+        "Preparation and timely submission of project components are emphasized for successful course completion."
+      ],
+      "topic_areas": [
+        {
+          "name": "neuroscience",
+          "category": "science",
+          "subject": "biology",
+          "topic": "neuroscience",
+          "subtopic": "",
+          "niche": "",
+          "description": "The study and understanding of the nervous system, including brain function, neural cells, and neurological processes."
+        },
+        {
+          "name": "data-analysis",
+          "category": "science",
+          "subject": "computer science",
+          "topic": "data processing",
+          "subtopic": "",
+          "niche": "",
+          "description": "Techniques and practices for processing, visualizing, and interpreting scientific data, including eye tracking and neural data."
+        },
+        {
+          "name": "education",
+          "category": "activities",
+          "subject": "curriculum planning",
+          "topic": "course schedule",
+          "subtopic": "",
+          "niche": "",
+          "description": "Organizing the structure of a course, including lectures, assignments, projects, and assessments in neuroscience."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 850,
+          "text_content": "It's not like the cleanest data for a number of reasons, but it's enough to kind of make the main points that we were trying to make about eye movements.",
+          "reason_for_selection": "Highlights the practical challenges faced in data collection and analysis.",
+          "context_around_quote": "The instructor discusses the quality of the eye tracking data to set realistic expectations for its analysis and visualization.",
+          "timestamp_seconds": 46.07
+        }
+      ],
+      "starting_timestamp_string": "0.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Eye Tracking Data and Methodology",
+        "transcript_title_slug": "eye-tracking-data-and-methodology",
+        "one_sentence_summary": "The speaker discusses the process of recording and processing eye-tracking data, emphasizing the iterative nature of data collection and the technical aspects of capturing and analyzing eye movements.",
+        "executive_summary": "This video segment explores the practical aspects of recording eye-tracking data, including setup challenges, data quality considerations, and the importance of iteration in refining data collection methods. The speaker shares insights into the technical setup involving infrared cameras and illuminators, as well as the interpretation of raw data to extract meaningful signals. Additionally, the discussion emphasizes the aspect of expertise development through repeated practice and learning from mistakes, highlighting that proficiency is built over time through experience.",
+        "topics_detailed_summary": "The speaker begins by showcasing a video file from the left eye's raw eye-tracking data, noting its quality issues possibly caused by lighting conditions and camera positioning. They mention the importance of recognizing and correcting such issues through repeated recordings, which is part of an iterative process essential to gaining expertise in using complex equipment. The discussion then shifts to the broader context of measuring motor control via video recordings, comparing it to motion capture data, and outlining how raw data is processed through various stages to analyze neural and motor systems. Technical details about the recording setup are provided, including the use of infrared cameras and secondary illuminators that operate in the infrared spectrum, with a focus on the frame rates (e.g., 120 fps for eye tracking vs. about 30-60 fps for standard video). The speaker also critiques common consumer camera features like slow-motion modes, highlighting how understanding underlying technology reveals their limitations and the importance of accurate data capture for scientific analysis. The segment concludes with considerations about data frames, timing, and the importance of understanding data acquisition processes for meaningful interpretation.",
+        "covered_topics_outline": [
+          {
+            "topic": "Eye Tracking Data Collection",
+            "topic_overview": "Discussion of capturing raw eye tracking data, camera setup, and lighting challenges.",
+            "subtopics": [
+              {
+                "subtopic": "Raw Data Quality",
+                "details": [
+                  "Appearance of the raw data from the eye tracker.",
+                  "Issues caused by shadowing and lighting reflections.",
+                  "Experience of data quality variability based on setup."
+                ]
+              },
+              {
+                "subtopic": "Technical Setup and Equipment",
+                "details": [
+                  "Use of infrared cameras and illuminators.",
+                  "Frame rates of cameras used in eye tracking (~120 fps).",
+                  "Comparison with standard video frame rates (~30-60 fps)."
+                ]
+              },
+              {
+                "subtopic": "Data Processing and Analysis",
+                "details": [
+                  "Extracting the position of the black patch in the eye images.",
+                  "Stages from raw data to meaningful signals."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Learning and Expertise",
+            "topic_overview": "Importance of iterative practice and experience in mastering techniques.",
+            "subtopics": [
+              {
+                "subtopic": "Iterative Improvement",
+                "details": [
+                  "Adjusting setups based on previous recordings.",
+                  "Recognizing data issues after initial trials."
+                ]
+              },
+              {
+                "subtopic": "Skill Development",
+                "details": [
+                  "Repeated practice leading to expertise.",
+                  "Accumulating experience allows identifying subtle issues.",
+                  "Expertise feels like continuous learning rather than mastery."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Broader Context of Video and Data Capture",
+            "topic_overview": "Comparison of eye tracking with motion capture and broader data collection methods.",
+            "subtopics": [
+              {
+                "subtopic": "Analogies with Motion Capture",
+                "details": [
+                  "Similarities to tracking motor control with video.",
+                  "Processing raw video data through stages of abstraction."
+                ]
+              },
+              {
+                "subtopic": "Understanding Data and Frame Rates",
+                "details": [
+                  "Discussion on frame rates and their impact.",
+                  "Limitations of consumer camera modes like slow motion.",
+                  "The importance of knowing technical details for accurate data analysis."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Data collection and technical setup",
+        "Iterative learning and expertise development",
+        "Understanding camera technology and data processing"
+      ],
+      "key_takeaways": [
+        "Effective eye tracking requires careful setup and recognition of data quality issues.",
+        "Iterative practice and experience are essential for developing expertise in complex technical tasks.",
+        "Understanding the technical aspects of cameras, such as frame rates and modes, is crucial for accurate data analysis.",
+        "Data processing involves multiple stages from raw video to extract meaningful signals about neural and motor control.",
+        "Self-awareness of mistakes and iterative correction improve data quality over time."
+      ],
+      "topic_areas": [
+        {
+          "name": "eye-tracking",
+          "category": "science",
+          "subject": "neuroscience",
+          "topic": "visual-cognition",
+          "subtopic": "eye-movement-tracking",
+          "niche": "",
+          "description": "This area involves recording and analyzing eye movements to understand ocular motor control and visual processing."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 820,
+          "text_content": "The only way that any human has ever gotten good at anything is to do that thing over and over and over again.",
+          "reason_for_selection": "Highlights the importance of practice and iteration in mastering complex skills.",
+          "context_around_quote": "Discussing how expertise in using complex equipment like eye trackers is developed through repeated experience.",
+          "timestamp_seconds": 740.24
+        }
+      ],
+      "starting_timestamp_string": "585.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Understanding Camera Timestamp Data and Precision in Data Analysis",
+        "transcript_title_slug": "understanding-camera-timestamp-data-and-precision-in-data-analysis",
+        "one_sentence_summary": "This chunk discusses the importance of timestamp data in video analysis, the variation in frame rates, and how precision impacts scientific and practical applications.",
+        "executive_summary": "The video explains how timestamp data from cameras is crucial for accurate analysis of video recordings. It highlights that most cameras do not produce actual measured timestamps but approximate ones, which can vary slightly. The discussion also emphasizes that the level of precision needed depends on the application, with high-precision being essential in scientific research involving neural and behavioral data, while more leniency is acceptable for general visualization or physics experiments. The importance of understanding the system and context is stressed for proper data interpretation and scientific rigor.",
+        "topics_detailed_summary": "The video begins by emphasizing the significance of understanding time intervals between video frames, which can be estimated using camera frame rates or timestamp data. It notes that most consumer cameras, like GoPros, do not encode real timestamps but generate approximation based on frame counts and duration, leading to uniform frame durations. The discussion transitions into how slight variations in frame time (e.g., 9 to 11 milliseconds) can impact precise measurements in physics or neural data analysis, but often are acceptable within larger data sets. The speaker underscores that the need for high precision depends on the application, highlighting that in neuroscience or electrophysiological studies, sub-millisecond accuracy may be critical. The broader point is made that scientists should understand the noise level permissible in their data, balancing the ideal of perfect accuracy with real-world limitations, and recognizing that in many cases, noisier data can be acceptable or even preferable for robustness.",
+        "covered_topics_outline": [
+          {
+            "topic": "Camera Timestamps",
+            "topic_overview": "Role of timestamp data in video analysis and its importance for accurate frame timing.",
+            "subtopics": [
+              {
+                "subtopic": "Raw Data Importance",
+                "details": [
+                  "Raw video data as the primary data source, with timestamps being equally necessary.",
+                  "Videos usually do not encode real measured timestamps."
+                ]
+              },
+              {
+                "subtopic": "Consumer Camera Limitations",
+                "details": [
+                  "Most consumer cameras use approximations based on frame count and duration.",
+                  "Examples like GoPro produce uniform frame durations, not actual timestamps."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Frame Rate Variations",
+            "topic_overview": "Impact of slight variations in frame timing on data analysis.",
+            "subtopics": [
+              {
+                "subtopic": "Physics Applications",
+                "details": [
+                  "Estimating physical variables like velocity using frame rate and timing between frames.",
+                  "Small timing variations (9-11 ms) usually do not significantly affect calculations over large data sets."
+                ]
+              },
+              {
+                "subtopic": "Scientific Precision",
+                "details": [
+                  "High-precision applications, such as neuroscience, require sub-millisecond accuracy.",
+                  "It's important to understand the noise levels and system limitations."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Application and Noise",
+            "topic_overview": "Determining acceptable levels of noise depending on research goals.",
+            "subtopics": [
+              {
+                "subtopic": "Science and Empirical Data",
+                "details": [
+                  "Reducing noise is essential in neuroscience to accurately interpret brain and behavioral data.",
+                  "In less sensitive applications, some noise does not fundamentally compromise the analysis."
+                ]
+              },
+              {
+                "subtopic": "Practical Data Use",
+                "details": [
+                  "In most cases, data with small timing errors can be averaged out or tolerated.",
+                  "In high-stakes applications like neural spike timing, sub-millisecond accuracy is critical."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Scientific Practice",
+            "topic_overview": "Balancing ideal data quality with real-world constraints and understanding system limitations.",
+            "subtopics": [
+              {
+                "subtopic": "Ideal vs. Practical",
+                "details": [
+                  "Aim for perfect empirical measurements but accept limitations in real-world conditions.",
+                  "Good scientists understand the permissible noise level in their data."
+                ]
+              },
+              {
+                "subtopic": "Experimentation Decision",
+                "details": [
+                  "Low-quality data may be discarded in favor of cleaner data for serious research.",
+                  "For course purposes, noisy data may be sufficient, emphasizing the importance of context."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Timestamp Accuracy",
+        "Camera Limitations",
+        "Data Precision in Scientific Contexts",
+        "Impact of Noise on Data Analysis",
+        "Balancing Ideal Conditions with Practical Limitations"
+      ],
+      "key_takeaways": [
+        "Most cameras do not produce true measured timestamps; they generate approximations based on frame count and duration.",
+        "Small variations in frame timing (9-11 ms) are usually acceptable over large datasets for general physics analysis.",
+        "High-precision requirements, such as in neuroscience, necessitate sub-millisecond accuracy.",
+        "Understanding the permissible noise level in your data depends on the specific application and goals.",
+        "Scientists should balance ideal data accuracy with real-world limitations and experimental context."
+      ],
+      "topic_areas": [
+        {
+          "name": "video-analysis",
+          "category": "science",
+          "subject": "neuroscience",
+          "topic": "data-precision",
+          "subtopic": "timestamping",
+          "niche": "camera-timestamp-accuracy",
+          "description": "Discussion on the importance of timestamp data from cameras and how it affects the analysis of video recordings and scientific measurements."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 950,
+          "text_content": "Videos generally, and I think by generally, I think almost universally, videos do not actually encode real measured timestamps from their frame rates.",
+          "reason_for_selection": "This quote clarifies a common misconception about video timestamp data and highlights the importance of understanding what data is actually encoded.",
+          "context_around_quote": "The speaker explains how consumer cameras produce timestamp data that is not a true measurement, often leading to uniform frame times.",
+          "timestamp_seconds": 1316.4
+        },
+        {
+          "quality": 900,
+          "text_content": "It's all just kind of a matter of in a perfect world we smush as much of the error, we smush all the error down to zero and we're sort of like we're having perfect empirical measurements of true reality.",
+          "reason_for_selection": "This quote encapsulates the philosophical approach to data measurement, emphasizing the importance of understanding and minimizing noise in scientific data.",
+          "context_around_quote": "The speaker discusses the ideal of achieving perfect measurements versus real-world limitations, especially in neural and behavioral research.",
+          "timestamp_seconds": 1737.25
+        }
+      ],
+      "starting_timestamp_string": "1170.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Understanding Basic Video Data and Camera Sensors",
+        "transcript_title_slug": "understanding-basic-video-data-and-camera-sensors",
+        "one_sentence_summary": "This segment discusses the nature of video data, camera sensors, and the representation of images as pixel matrices with values between 0 and 1, emphasizing the vast amount of data and the limitations of digital representations of reality.",
+        "executive_summary": "The speaker explains the foundational concepts of digital image data, including the resolution, pixel values, and how cameras convert light into voltages. They highlight the noise in data collection, the physical limits of sensors, and compare image data quality to reality, stressing that digital data is just a shadow of real-world detail. The discussion also touches on data rates and the importance of understanding what information can be extracted from each frame.",
+        "topics_detailed_summary": "The segment begins with reflections on data quality and noise, emphasizing that real-world data collection involves imperfections that are useful for learning. The speaker then describes the basic structure of image data as a 400x400 pixel grid, with each pixel storing a value between 0 and 1, corresponding to the voltage output of camera sensors. They differentiate between the analog sensor process and the conceptual analogy with the retina, noting the physical limits like sensor saturation and gain settings. The discussion covers data size and rate, illustrating how large volumes of data are produced, yet still remain a simplified shadow of reality. The speaker underscores that despite technological advances, digital images cannot fully capture the complexity of real-world scenes.",
+        "covered_topics_outline": [
+          {
+            "topic": "Data Quality and Noise",
+            "topic_overview": "Discussion on the imperfections in data collection and the educational value of noisy data.",
+            "subtopics": [
+              {
+                "subtopic": "Noisy Data as a Learning Tool",
+                "details": [
+                  "It's good when data is a bit noisy because it facilitates meaningful conversations and understanding."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Camera Data Basics",
+            "topic_overview": "Overview of how cameras produce digital images as pixel grids.",
+            "subtopics": [
+              {
+                "subtopic": "Image Resolution",
+                "details": [
+                  "Images are 400 by 400 pixels, with each pixel valued between 0 and 1."
+                ]
+              },
+              {
+                "subtopic": "Pixel Value Interpretation",
+                "details": [
+                  "Values between 0 and 1 represent the voltage output, correlating to black (0) and white (1).",
+                  "Pixels near 255 indicate full saturation, and around 0 indicate black."
+                ]
+              },
+              {
+                "subtopic": "Analog to Digital Conversion",
+                "details": [
+                  "Sensors convert photons into voltage, analogously to the retina, but only roughly similar."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Data Size and Rate",
+            "topic_overview": "Explanation of data volume generated by high-resolution, high-frame-rate video and its implications.",
+            "subtopics": [
+              {
+                "subtopic": "Data Calculation",
+                "details": [
+                  "A 400x400 image at 120 fps results in massive data, but still limited as a shadow of reality."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Limitations and Reality",
+            "topic_overview": "Digital images are limited representations of real-world detail.",
+            "subtopics": [
+              {
+                "subtopic": "Comparison with Reality",
+                "details": [
+                  "Even 4K at 1000 fps remains a dim shadow of real-world detail regarding eye structures."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Implications for Data Analysis",
+            "topic_overview": "Understanding what can be extracted and the limitations of pixel data.",
+            "subtopics": [
+              {
+                "subtopic": "Data Extraction",
+                "details": [
+                  "Basic data includes pixel values, but deeper features require analysis beyond raw pixels."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Data Quality and Noise",
+        "Digital Image Representation",
+        "Camera Sensors and Physics",
+        "Data Volume and Limitations",
+        "Digital Shadows of Reality"
+      ],
+      "key_takeaways": [
+        "Noisy data can be beneficial for learning and realistic data collection.",
+        "Cameras produce images as pixel matrices with values between 0 and 1, representing voltage outputs.",
+        "The size of video data at high resolution and frame rate is enormous, yet still a simplified version of reality.",
+        "Sensors convert photons into voltage, analogous but not identical to biological processes like the retina.",
+        "Digital images are inherently limited and only a shadow of the true complexity of the physical world."
+      ],
+      "topic_areas": [
+        {
+          "name": "video-data",
+          "category": "technology",
+          "subject": "computer vision",
+          "topic": "digital-images",
+          "subtopic": "camera-sensors",
+          "niche": "sensor-physics",
+          "description": "Exploring how cameras convert light into digital image data, including resolution, pixel values, and physical sensor limitations."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 850,
+          "text_content": "And this picture is actually. So the videos from the mocap stuff was a little more complex because it was a color image. So not that much more complex. But it is like, you know, but this, this is a simpler, simpler beast where it is a.",
+          "reason_for_selection": "Provides insight into the complexity of different types of image data, highlighting the core concepts of pixel-based image representation.",
+          "context_around_quote": "The speaker explains the differences between simple grayscale images and more complex colored mocap videos, emphasizing the fundamental structure of image data.",
+          "timestamp_seconds": 1884.089
+        },
+        {
+          "quality": 900,
+          "text_content": "This pixel, if we were to go in there and measure it actually. Can I do that? I cannot. The value coming off of this is probably pretty close to 255. Like that's fully saturated. If anyone ever does photography. That kind of like that zebra stripes thing, that it will show up if the image is fully washed out is telling you this is the place where the sensor is maxed out.",
+          "reason_for_selection": "Highlights the concept of sensor saturation and the physical limits of digital imaging, which is essential for understanding data quality.",
+          "context_around_quote": "The speaker discusses pixel saturation, brightness levels, and how sensor limitations impact image data.",
+          "timestamp_seconds": 2014.079
+        }
+      ],
+      "starting_timestamp_string": "1755.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Understanding Camera Coordinates and Data Conventions in Eye Tracking",
+        "transcript_title_slug": "understanding-camera-coordinates-and-data-conventions-in-eye-tracking",
+        "one_sentence_summary": "The speaker discusses the importance of coordinate systems and conventions in processing eye-tracking data, highlighting geometric, cultural, and technical aspects.",
+        "executive_summary": "This segment explores how eye-tracking data is captured and interpreted in different coordinate systems. It emphasizes the fixed position of the camera relative to the head, the variations in coordinate conventions across disciplines, and the importance of understanding these differences for accurate data analysis. The talk also touches on the cultural elements influencing scientific conventions and briefly mentions image compression techniques.",
+        "topics_detailed_summary": "The discussion begins with the aim of determining the pupil's position relative to the head and clarifies that the camera's view remains fixed relative to the head. It explains the camera coordinate system, where the origin is at the upper left of the image, with positive Y pointing down and positive X to the right, contrasting with traditional mathematical coordinate systems. The speaker highlights the importance of understanding different conventions across disciplines, noting that in biomechanics, Z points up, while in vision research, Z points back, illustrating the arbitrary nature of coordinate choices. Additionally, cultural influences and conventions in science and technology are discussed, including how protocols and data formats are based on agreed-upon standards. The segment also briefly covers how image compression works by leveraging data redundancy and regional similarities to reduce file sizes.",
+        "covered_topics_outline": [
+          {
+            "topic": "Coordinate Systems and Conventions",
+            "topic_overview": "Exploring how different disciplines use various coordinate systems and the implications for data interpretation.",
+            "subtopics": [
+              {
+                "subtopic": "Camera Coordinates",
+                "details": [
+                  "The sensor's data is in camera coordinates, which are fixed relative to the head.",
+                  "Image coordinates start at the upper left corner, with Y pointing down and X pointing right.",
+                  "Zero-based indexing is used in image coordinates."
+                ]
+              },
+              {
+                "subtopic": "Different Disciplinary Conventions",
+                "details": [
+                  "In biomechanics, Z points up, and X, Y form the ground plane.",
+                  "In vision and virtual reality, XY are image planes and Z points back.",
+                  "These differences are cultural and arbitrary but rooted in specific disciplinary needs."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Cultural and Protocol Elements in Science",
+            "topic_overview": "Discussing how scientific conventions and protocols shape data interpretation.",
+            "subtopics": [
+              {
+                "subtopic": "Data Formats and Protocols",
+                "details": [
+                  "Data is often recorded in a specific way according to cultural conventions.",
+                  "Protocols such as HTTP for data transfer exemplify agreed standards.",
+                  "Breaking these conventions leads to rejection or errors in data processing."
+                ]
+              },
+              {
+                "subtopic": "Science as Cultural Practice",
+                "details": [
+                  "Scientific norms are influenced by cultural traditions and practices.",
+                  "Different fields use different standards for coordinate axes and data handling."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Image Compression Techniques",
+            "topic_overview": "Brief overview of how image data is compressed by leveraging redundancy.",
+            "subtopics": [
+              {
+                "subtopic": "Raw Image Data",
+                "details": [
+                  "Raw data records every pixel individually, leading to large file sizes (~160 KB per frame)."
+                ]
+              },
+              {
+                "subtopic": "Compression Methods",
+                "details": [
+                  "Techniques like bitmap, JPEG, and PNG replace regions of uniform data with simplified representations.",
+                  "Such methods reduce storage size by exploiting the redundancy in image data."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Coordinate Systems",
+        "Disciplinary Conventions",
+        "Cultural Influence in Science",
+        "Data Protocols",
+        "Image Compression"
+      ],
+      "key_takeaways": [
+        "Camera coordinates are fixed relative to the head, with the origin at the upper left of the image.",
+        "Different scientific disciplines can have different coordinate conventions, which are largely arbitrary but culturally ingrained.",
+        "Understanding the conventions used in data acquisition is crucial for accurate interpretation.",
+        "Data protocols and standards shape how data is formatted, transferred, and interpreted.",
+        "Image compression techniques utilize regional redundancy to significantly reduce file sizes."
+      ],
+      "topic_areas": [
+        {
+          "name": "coordinate-systems",
+          "category": "science",
+          "subject": "vision",
+          "topic": "data-interpretation",
+          "subtopic": "camera-coordinates",
+          "niche": "image-coordinates-standards",
+          "description": "Explains the basis of coordinate systems used in eye-tracking and image data, including differences across disciplines and conventions."
+        },
+        {
+          "name": "cultural-norms",
+          "category": "science",
+          "subject": "philosophy",
+          "topic": "scientific-conventions",
+          "subtopic": "protocols-and-standards",
+          "niche": "science-culture",
+          "description": "Discusses how scientific norms and protocols are shaped by cultural traditions and impact data handling and interpretation."
+        },
+        {
+          "name": "image-compression",
+          "category": "technology",
+          "subject": "digital-image-processing",
+          "topic": "data-compression",
+          "subtopic": "image-compression-techniques",
+          "niche": "JPEG-PNG",
+          "description": "Provides a brief overview of how image data is compressed, focusing on the benefits of exploiting regional uniformity."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 850,
+          "text_content": "In image coordinates, positive Y goes down. So down is up. When the number goes up, the pixel goes down.",
+          "reason_for_selection": "Highlights the counterintuitive nature of image coordinate systems, crucial for understanding data interpretation.",
+          "context_around_quote": "The speaker explains how image coordinate systems differ from mathematical ones, emphasizing the importance of convention in data analysis.",
+          "timestamp_seconds": 2506.949
+        },
+        {
+          "quality": 900,
+          "text_content": "It's arbitrary. X and Y. Don't like they could be anything. We just chose those because they're like the weird letters at the end of the Alphabet.",
+          "reason_for_selection": "Emphasizes the arbitrary nature of convention in coordinate systems, illustrating cultural influences on scientific practices.",
+          "context_around_quote": "Discussing how various fields adopt different axes conventions; the choice of X, Y, Z is a matter of tradition rather than correctness.",
+          "timestamp_seconds": 2695.51
+        }
+      ],
+      "starting_timestamp_string": "2340.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Data Compression and Computer Vision Techniques",
+        "transcript_title_slug": "data-compression-and-computer-vision-techniques",
+        "one_sentence_summary": "The video discusses methods of data compression, differentiates between classical and modern computer vision approaches, and explains eye-tracking data analysis using image processing techniques.",
+        "executive_summary": "This segment delves into data compression strategies such as lossy and lossless methods, highlighting the trade-offs involved. It distinguishes between classical computer vision, which relies on direct image analysis, and contemporary approaches that utilize neural networks. The speaker explains the process of eye-tracking data analysis, including pupil detection through image processing, and discusses how different data streams like pupil position and diameter are extracted depending on scientific needs.",
+        "topics_detailed_summary": "The speaker explores data compression by comparing lossy methods like JPEG, which may lose information but are faster, against lossless methods like PNG, which preserve data but take longer to process. He then discusses the role of convolutional neural networks (CNNs) in modern computer vision tasks, especially in identifying human shapes, drawing an analogy to a magic box that performs inference based on trained data. Contrasting this with classical computer vision, the speaker emphasizes that classical techniques analyze raw image pixel luminance to identify features such as the sclera, iris, and pupil, without deep learning or statistical training. He describes how dark pixels are used to estimate pupils via fitted ellipses, calculating the pupil position (X, Y) and sometimes diameter for gaze analysis. The discussion also touches on how different scientific applications may prioritize different aspects of eye data, such as pupil position versus size, and explains the geometric considerations in eye-tracking. Finally, there is a practical demonstration of detecting eye position and related issues like perspective and head movement affecting data accuracy.",
+        "covered_topics_outline": [
+          {
+            "topic": "Data Compression",
+            "topic_overview": "The section explains lossy and lossless data compression techniques and their trade-offs.",
+            "subtopics": [
+              {
+                "subtopic": "Lossy vs Lossless Compression",
+                "details": [
+                  "JPEG (lossy) reduces file size but loses some data.",
+                  "PNG (lossless) preserves data but takes longer to compress and decompress."
+                ]
+              },
+              {
+                "subtopic": "Decision-making in Compression",
+                "details": [
+                  "Choosing between lossy and lossless compression depends on the need for speed versus data fidelity.",
+                  "Parameters, such as the threshold for considering two numbers 'the same,' are adjusted based on this choice."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Computer Vision Techniques",
+            "topic_overview": "Comparison of classical computer vision with modern neural network approaches in image analysis.",
+            "subtopics": [
+              {
+                "subtopic": "Neural Networks in Vision",
+                "details": [
+                  "CNNs are used for tasks like identifying human shapes and drawing skeletons, functioning as inferential 'magic boxes.'",
+                  "They are trained on large data sets and fall under the broad umbrella of AI."
+                ]
+              },
+              {
+                "subtopic": "Classical Computer Vision",
+                "details": [
+                  "Relies on analyzing raw pixel data, such as luminance gradients to identify features like sclera, iris, and pupil.",
+                  "Methods do not involve deep learning or statistical training, instead using direct computation of image features."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Eye-Tracking Data Processing",
+            "topic_overview": "Explanation of how pupil data is extracted and utilized in eye-tracking analysis.",
+            "subtopics": [
+              {
+                "subtopic": "Pupil Detection",
+                "details": [
+                  "Uses dark pixel detection and ellipse fitting to estimate pupil boundaries.",
+                  "The ellipse provides data about pupil position and sometimes size (diameter)."
+                ]
+              },
+              {
+                "subtopic": "Data Streams and Usage",
+                "details": [
+                  "Position (X, Y) of the pupil is useful for gaze tracking.",
+                  "Pupil diameter is of interest in pupillometry for physiological or cognitive analysis.",
+                  "Depending on research focus, one may prioritize position over size or vice versa."
+                ]
+              },
+              {
+                "subtopic": "Geometric and Physical Considerations",
+                "details": [
+                  "Eye is modeled as a sphere attached to the head, with rotations affecting data.",
+                  "Head movement and perspective can affect accuracy and interpretation of eye position data."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Data compression techniques and their implications",
+        "Differentiation between classical and modern computer vision methods",
+        "Eye-tracking data analysis, including pupil detection and interpretation"
+      ],
+      "key_takeaways": [
+        "Lossy compression like JPEG reduces data size with potential loss of information, while lossless like PNG preserves data but is less efficient.",
+        "Modern computer vision heavily employs neural networks, particularly CNNs, for image inference, whereas classical methods analyze raw pixel luminance.",
+        "Eye-tracking involves detecting pupils by analyzing luminance gradients, fitting ellipses, and extracting positional data, which may be prioritized differently based on research goals.",
+        "Head and perspective movements influence eye data interpretation, emphasizing the importance of understanding physical and geometric factors in analysis."
+      ],
+      "topic_areas": [
+        {
+          "name": "data-compression",
+          "category": "technology",
+          "subject": "image-processing",
+          "topic": "compression",
+          "subtopic": "",
+          "niche": "",
+          "description": "Exploration of lossy and lossless image compression techniques and their applications."
+        },
+        {
+          "name": "computer-vision",
+          "category": "technology",
+          "subject": "artificial-intelligence",
+          "topic": "visual-recognition",
+          "subtopic": "",
+          "niche": "",
+          "description": "Comparison between classical image analysis methods and neural network based approaches in computer vision."
+        },
+        {
+          "name": "eye-tracking",
+          "category": "health",
+          "subject": "sensor-technology",
+          "topic": "pupil-detection",
+          "subtopic": "",
+          "niche": "",
+          "description": "Methods and considerations in detecting pupil position and size from image data for eye-tracking studies."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 900,
+          "text_content": "Classical computer vision relies on analyzing raw pixel data, like luminance gradients, to identify features such as the sclera, iris, and pupil.",
+          "reason_for_selection": "This quote highlights the fundamental difference between traditional computer vision techniques and modern AI methods, emphasizing the underlying image analysis process.",
+          "context_around_quote": "The speaker contrasts classical methods that analyze pixel luminance directly to detect eye features with deep learning approaches.",
+          "timestamp_seconds": 0.0
+        }
+      ],
+      "starting_timestamp_string": "2925.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Understanding Eye Rotation and Torsion in Eye Tracking",
+        "transcript_title_slug": "understanding-eye-rotation-and-torsion-in-eye-tracking",
+        "one_sentence_summary": "The speaker discusses the concepts of eye rotation, torsion, and coordinate systems, emphasizing the challenges and importance of measuring torsion accurately in eye tracking technology.",
+        "executive_summary": "This video segment explores the complexities of measuring eye movements, focusing on rotation and torsion. The speaker explains the differences between Cartesian and polar coordinates, emphasizing their relevance in tracking eye position. They highlight the limitations of current eye tracking methods in measuring torsion and advocate for more precise tools to understand eye behavior in neuroscience research.",
+        "topics_detailed_summary": "The speaker begins by describing the attachment of the eye to the head and discusses rotation along the axis, introducing the concept of torsion. They explain different coordinate systems, including Cartesian and polar coordinates, and their applications in measuring eye position. The discussion includes the relevance of these coordinates in 2D and 3D space, particularly in the context of eye tracking. The speaker emphasizes the significance of measuring torsion, noting that current eye trackers do not directly measure this due to the unconstrained degrees of freedom of the pupil. They demonstrate how head rotation can induce torsion in the eye and critique scientific literature that dismisses the importance of torsion, attributing this to historical focus on head-fixed studies. The segment concludes with an overview of different eye tracking technologies, including magnetic coil methods, and the desire for more accurate tools to map eye movements to the visual field.",
+        "covered_topics_outline": [
+          {
+            "topic": "Eye Movement Mechanics",
+            "topic_overview": "Discussion on the mechanics of eye rotation, torsion, and coordinate systems.",
+            "subtopics": [
+              {
+                "subtopic": "Rotation and Torsion",
+                "details": [
+                  "Eye attachment to head",
+                  "Different axes of rotation",
+                  "Ocular torsion and its measurement"
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Coordinate Systems in Eye Tracking",
+            "topic_overview": "Exploration of Cartesian and polar coordinates, and their relevance in describing eye position.",
+            "subtopics": [
+              {
+                "subtopic": "Cartesian vs Polar Coordinates",
+                "details": [
+                  "Use in 3D space",
+                  "Advantages in 2D tracking",
+                  "Simplifications in fixed distance scenarios"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Eye rotation and torsion",
+        "Coordinate systems in eye tracking",
+        "Limitations of current eye tracking technology",
+        "Importance of measuring torsion in neuroscience"
+      ],
+      "key_takeaways": [
+        "Current eye trackers do not measure torsion because they lack the necessary degrees of freedom.",
+        "Understanding torsion is crucial for accurate mapping of eye position to the visual world.",
+        "Head rotation can induce torsion, which is often overlooked in studies.",
+        "Polar coordinates simplify the description of eye position when the distance is fixed.",
+        "More advanced measurement techniques, like magnetic coils, exist but are not widely used due to complexity."
+      ],
+      "topic_areas": [
+        {
+          "name": "eye-movement",
+          "category": "neuroscience",
+          "subject": "visual-movement",
+          "topic": "ocular-rotation",
+          "subtopic": "torsion",
+          "niche": "measurement",
+          "description": "Discussion of eye rotation, torsion, and coordinate systems used in tracking eye movements, emphasizing their significance in neuroscience."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 850,
+          "text_content": "So it is. So this is actually. What's that? I guess so it would be. Oh yeah.",
+          "reason_for_selection": "Highlights the speaker's acknowledgment of the axes involved in eye rotation.",
+          "context_around_quote": "At the start of the segment, the speaker is describing the axes of eye movement and how they relate to the head.",
+          "timestamp_seconds": 3527.199
+        },
+        {
+          "quality": 900,
+          "text_content": "If you look at the. Look at. This is the game of look at the video. Take a video on your phone, look straight into the camera and then rotate your head like this. You'll see your eye doing torsion. It'll do like plus or minus 7 degrees.",
+          "reason_for_selection": "Provides a practical demonstration of ocular torsion, making the concept tangible.",
+          "context_around_quote": "This quote is from a segment where the speaker encourages viewers to observe their own eye movements during head rotation.",
+          "timestamp_seconds": 3842.769
+        }
+      ],
+      "starting_timestamp_string": "3510.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Eye Tracking and Data Reduction Techniques",
+        "transcript_title_slug": "eye-tracking-and-data-reduction-techniques",
+        "one_sentence_summary": "The speaker discusses the challenges of measuring eye torsion with current technology, the potential for machine learning to improve eye tracking, and the process of reducing high-dimensional image data into manageable, low-dimensional features for analysis.",
+        "executive_summary": "This segment explores the limitations of existing eye-tracking equipment for measuring eye torsion, highlighting the gap between ideal scientific measurement and practical, market-driven applications. The speaker emphasizes ongoing efforts in research for developing more accurate, portable solutions. Additionally, the discussion covers the process of converting complex image data into simplified numerical representations (X and Y coordinates), making real-time analysis feasible, and reflects on the vast scale of data in digital imaging.",
+        "topics_detailed_summary": "The speaker begins by describing traditional high-accuracy eye-tracking methods using specialized equipment, noting their impracticality for everyday use. They mention that current commercial devices are not capable of measuring torsion, and that while detection is theoretically possible via feature tracking on the iris, it remains difficult in practice. The speaker advocates for machine learning approaches to improve these measurements. They then shift focus to data processing, illustrating how raw image data—initially at 160,000 dimensions—can be reduced to just two variables (X and Y positions), which greatly simplifies subsequent analysis. The importance of normalization and aspect ratio considerations in representing image coordinates is also discussed. The speaker emphasizes the enormous quantity of data generated and the importance of efficient abstraction, likening it to dividing labor between humans and machines. They conclude with a humorous reflection on the increasing scale of digital storage units.",
+        "covered_topics_outline": [
+          {
+            "topic": "Eye Tracking Technology",
+            "topic_overview": "Discussion of the current state and challenges of eye-tracking methods for measuring eye movements including torsion.",
+            "subtopics": [
+              {
+                "subtopic": "High-precision equipment",
+                "details": [
+                  "Uses a suction pump and magnetic fields for high accuracy",
+                  "Impractical for everyday use"
+                ]
+              },
+              {
+                "subtopic": "Feature tracking in iris",
+                "details": [
+                  "Possible via change detection in iris features",
+                  "Difficult to implement reliably in real-world signals"
+                ]
+              },
+              {
+                "subtopic": "Market trends",
+                "details": [
+                  "Market driven by marketing needs: ad focus",
+                  "Shift towards machine learning solutions"
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Data Processing and Reduction",
+            "topic_overview": "Methods for simplifying high-dimensional image data into manageable metrics for analysis.",
+            "subtopics": [
+              {
+                "subtopic": "Initial data dimensionality",
+                "details": [
+                  "160,000 degrees of freedom per image"
+                ]
+              },
+              {
+                "subtopic": "Dimensionality reduction",
+                "details": [
+                  "Boiling down to pupil X and Y positions",
+                  "Normalized between 0 and 1 based on image dimensions"
+                ]
+              },
+              {
+                "subtopic": "Aspect ratio considerations",
+                "details": [
+                  "Conversion to square aspect ratio for simplicity",
+                  "Implication for data representation"
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Data Scale and Storage",
+            "topic_overview": "Discussion of the massive scale of image data and its implications.",
+            "subtopics": [
+              {
+                "subtopic": "Data volume",
+                "details": [
+                  "Image data at 160,000 dimensions per frame",
+                  "Processed down to 240 bytes per second"
+                ]
+              },
+              {
+                "subtopic": "Data units",
+                "details": [
+                  "Gigabytes, terabytes, and larger units",
+                  "Humorous reflection on storage scale"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Eye tracking technology limitations",
+        "Machine learning in eye tracking",
+        "Data reduction and feature extraction",
+        "Data scale and storage",
+        "Practical challenges of measurement"
+      ],
+      "key_takeaways": [
+        "Current high-precision eye trackers are impractical for everyday use and do not measure torsion well.",
+        "Feature tracking in the iris could theoretically detect torsion, but is very difficult in practice.",
+        "The market focus on marketing metrics has shifted development away from scientific measurements.",
+        "High-dimensional image data can be effectively reduced to a few key features like pupil position.",
+        "Reducing data complexity enables real-time analysis, but still involves handling large amounts of information.",
+        "Humans and machines share the workload of data analysis, with machines doing the heavy lifting.",
+        "Digital data storage continues to grow exponentially, illustrating the scale of modern data."
+      ],
+      "topic_areas": [
+        {
+          "name": "eye-tracking",
+          "category": "science",
+          "subject": "biology",
+          "topic": "neuroscience",
+          "subtopic": "oqulomotor-control",
+          "niche": "torsion-measurement",
+          "description": "Discussion of current methods and challenges in measuring eye torsion for neuroscience research and practical applications, emphasizing the limitations of existing equipment and potential for machine learning improvements."
+        },
+        {
+          "name": "data-processing",
+          "category": "technology",
+          "subject": "computer science",
+          "topic": "image processing",
+          "subtopic": "feature-extraction",
+          "niche": "dimensionality-reduction",
+          "description": "Exploration of techniques to convert high-dimensional image data into low-dimensional features such as pupil X and Y coordinates for efficient analysis."
+        },
+        {
+          "name": "data-scale",
+          "category": "technology",
+          "subject": "information storage",
+          "topic": "data storage",
+          "subtopic": "digital storage units",
+          "niche": "byte-units",
+          "description": "Overview of the vast scale of digital data, from bytes to yottabytes, reflecting on the exponential growth of data storage capabilities."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 900,
+          "text_content": "Current state of eye tracking, torsion is unavailable.",
+          "reason_for_selection": "Highlights the fundamental limitation in current eye-tracking technology.",
+          "context_around_quote": "Discussing the current capabilities and constraints of commercial eye tracking devices used outside controlled laboratory settings.",
+          "timestamp_seconds": 4149.47
+        },
+        {
+          "quality": 950,
+          "text_content": "You take this huge image data set, and you boil it down into just X and Y, which is much more manageable.",
+          "reason_for_selection": "Captures the essential data reduction process central to the speaker's methodology.",
+          "context_around_quote": "Explaining how raw image data is transformed into low-dimensional features for analysis.",
+          "timestamp_seconds": 0.0
+        }
+      ],
+      "starting_timestamp_string": "4095.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "Data and Data Management in Eye Tracking",
+        "transcript_title_slug": "data-and-data-management-in-eye-tracking",
+        "one_sentence_summary": "The speaker discusses the concepts of raw and derived data in eye tracking, file management, and the trustworthiness of AI confidence values.",
+        "executive_summary": "This video chunk covers the importance of understanding raw versus derived data in eye tracking experiments. The speaker explains the data storage structure, highlighting raw data like MP4 videos and timestamps, and computed data such as gaze and blink information. The discussion extends to AI confidence values, their limitations, and how neural networks are trained to recognize specific objects, emphasizing the need for cautious interpretation of AI outputs.",
+        "topics_detailed_summary": "The speaker begins by commenting on the increasing scale of data sizes, from kilobytes to exabytes. They highlight the distinction between raw data, which cannot be reconstructed or recalculated, and derived data, which is processed from raw data, such as blink detection in eye tracking. The conversation then moves to data management practices, including folder structure organization, emphasizing the separation between raw recordings (MP4 videos, timestamps) and computed data (gaze positions, confidence scores). The speaker praises the human-readable TXT files accompanying the data, which describe the contents. They discuss confidence values produced by neural networks, illustrating that high confidence doesn't guarantee correctness, as adversarial examples can manipulate these confidence scores. An example is given where pixels are altered in an image to find the null space—areas that don't affect the confidence level—and the limitations of AI confidence are emphasized. The discussion concludes with notes on file formats like CSV and TSV, and the importance of precise timestamping in eye-tracking research.",
+        "covered_topics_outline": [
+          {
+            "topic": "Data Size and Storage",
+            "topic_overview": "Discussion on the growth of data sizes and the organization of data files.",
+            "subtopics": [
+              {
+                "subtopic": "Data Size Scale",
+                "details": [
+                  "Mention of sizes from kilobytes to exabytes.",
+                  "Humor about more data on phones than the example file."
+                ]
+              }
+            ]
+          },
+          {
+            "topic": "Raw vs Derived Data",
+            "topic_overview": "Distinction between raw recorded data and processed, calculated data.",
+            "subtopics": [
+              {
+                "subtopic": "Raw Data",
+                "details": [
+                  "Includes MP4 videos and timestamps.",
+                  "Cannot be reconstructed or recalculated after recording."
+                ]
+              },
+              {
+                "subtopic": "Derived Data",
+                "details": [
+                  "Includes blink data, gaze positions, confidence scores.",
+                  "Recalculated from raw data if needed."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "Data organization in eye tracking",
+        "Difference between raw and derived data",
+        "AI confidence evaluation",
+        "Data file formats and structure"
+      ],
+      "key_takeaways": [
+        "Raw data (MP4, timestamps) is the fundamental recording and cannot be reconstructed.",
+        "Derived data, like blinks or gaze points, are computed from raw data and can be recalculated.",
+        "Data is organized into folders separating raw and processed data for clarity.",
+        "AI confidence scores are not always reliable; high confidence does not guarantee correctness.",
+        "Understanding data formats (CSV, TXT) and timestamps is crucial in research."
+      ],
+      "topic_areas": [
+        {
+          "name": "data-management",
+          "category": "science",
+          "subject": "data management",
+          "topic": "file-organization",
+          "subtopic": "raw-derived",
+          "niche": "folder-structure",
+          "description": "Discussion on how raw and derived data are stored and organized, emphasizing the importance of understanding data types in research."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 850,
+          "text_content": "The only pieces of raw Data are the MP4 videos and the timestamps.",
+          "reason_for_selection": "Highlights the core raw data components in eye tracking research.",
+          "context_around_quote": "The speaker explains what constitutes raw data versus processed data, emphasizing the importance of timestamps and video recordings.",
+          "timestamp_seconds": 4962.52
+        }
+      ],
+      "starting_timestamp_string": "4680.0"
+    },
+    {
+      "summary": {
+        "transcript_title": "3D Spherical Model and Eye Tracking",
+        "transcript_title_slug": "3d-spherical-model-and-eye-tracking",
+        "one_sentence_summary": "This segment discusses the mathematical modeling of eye tracking using 3D spherical models, including ellipse and circle measurements, and coordinate systems such as azimuth and elevation.",
+        "executive_summary": "In this chunk, the speaker explains the use of 3D spherical models for eye tracking, focusing on ellipse measurements like center and axes, and how these relate to circular projections on a sphere. They clarify the coordinate system distinctions, particularly between theta phi and theta rho, emphasizing the concepts of azimuth and elevation. The discussion also touches on calibration processes and the spatial positioning of gaze data.",
+        "topics_detailed_summary": "The segment details the mathematical approach to modeling eye positions in 3D space, utilizing ellipse parameters such as center coordinates, axes, and angles. It discusses the conversion from 2D ellipse estimates to a 3D sphere projection, highlighting the use of spherical coordinates such as azimuth and elevation. The speaker clarifies the distinction between the coordinate systems theta phi (used for azimuth and elevation) and theta rho, emphasizing the importance of understanding the orientation and positioning of the gaze in three dimensions. The segment concludes with a mention of calibration between eye cameras and the world camera, providing context for accurate gaze estimation.",
+        "covered_topics_outline": [
+          {
+            "topic": "3D Spherical Model",
+            "topic_overview": "Using 3D spherical models to represent eye gaze and position, including ellipse and circle measurements.",
+            "subtopics": [
+              {
+                "subtopic": "Ellipse Parameters",
+                "details": [
+                  "Ellipse center coordinates (X, Y)",
+                  "Major and minor axes",
+                  "Ellipse angle"
+                ]
+              },
+              {
+                "subtopic": "Circle on Sphere",
+                "details": [
+                  "Conversion from 2D ellipse to 3D circular projection",
+                  "Sphere center and radius"
+                ]
+              },
+              {
+                "subtopic": "Coordinate Systems",
+                "details": [
+                  "Azimuth and elevation (theta phi)",
+                  "Difference from theta rho"
+                ]
+              },
+              {
+                "subtopic": "Calibration and Positioning",
+                "details": [
+                  "Calibration between eye cameras and world camera",
+                  "Gaze spatial positioning"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "main_themes": [
+        "3D eye modeling",
+        "Spherical geometry in gaze estimation",
+        "Coordinate system distinctions",
+        "Calibration processes in eye tracking"
+      ],
+      "key_takeaways": [
+        "Eye gaze can be modeled in 3D using spherical geometrical representations.",
+        "Ellipse parameters are crucial in estimating eye positions and their 3D projection.",
+        "The coordinate system involving azimuth and elevation (theta phi) is essential for spatial orientation, distinct from theta rho.",
+        "Calibration between different camera systems improves accuracy in gaze estimation."
+      ],
+      "topic_areas": [
+        {
+          "name": "eye-tracking",
+          "category": "science",
+          "subject": "vision science",
+          "topic": "gaze estimation",
+          "subtopic": "3d-spherical-model",
+          "niche": "ellipse and circle modeling on sphere",
+          "description": "This area covers the mathematical and geometric principles involved in modeling eye gaze in three dimensions using spherical representations, including the use of ellipse parameters, spherical coordinates, and calibration techniques."
+        }
+      ],
+      "pull_quotes": [
+        {
+          "quality": 750,
+          "text_content": "Basically everything after this line is using the 3D spherical model.",
+          "reason_for_selection": "It summarizes the core topic of this video segment, which is the application of 3D spherical models in eye tracking.",
+          "context_around_quote": "The speaker introduces the use of 3D models for eye tracking, emphasizing the parameters involved and how they relate to the spherical projection of the eye's gaze.",
+          "timestamp_seconds": 5295.72
+        }
+      ],
+      "starting_timestamp_string": "5265.0"
+    }
+  ],
+  "themes": [
+    "Data quality and processing in eye tracking",
+    "Technical considerations of camera and sensor technology",
+    "Coordinate systems and data conventions in eye tracking"
+  ],
+  "topics": [
+    {
+      "name": "eye-tracking",
+      "category": "science",
+      "subject": "neuroscience",
+      "topic": "visual-cognition",
+      "subtopic": "eye-movement-tracking",
+      "niche": "torsion-measurement",
+      "description": "This area involves recording and analyzing eye movements, including the challenges and limitations of measuring eye torsion using current technology and potential improvements via machine learning."
+    },
+    {
+      "name": "data-analysis",
+      "category": "science",
+      "subject": "computer science",
+      "topic": "data-processing",
+      "subtopic": "video-data",
+      "niche": "camera-timestamp-accuracy",
+      "description": "Techniques for processing video and timestamp data, emphasizing the importance of understanding data fidelity and the implications for high-precision research."
+    },
+    {
+      "name": "technology",
+      "category": "science",
+      "subject": "sensor-physics",
+      "topic": "camera-sensors",
+      "subtopic": "digital-images",
+      "niche": "image-compression",
+      "description": "Exploration of how digital cameras convert light into images, the limitations in capturing scene complexity, and the data compression methods that balance size and fidelity."
+    }
+  ],
+  "takeaways": [
+    "Effective data sharing and organization improve research workflows.",
+    "Iterative practice enhances expertise in technical setup and data capture.",
+    "Camera timestamps are often approximations; high precision may require specialized setups."
+  ],
+  "pull_quotes": [
+    {
+      "quality": 1000,
+      "text_content": "Videos generally, and I think by generally, I think almost universally, videos do not actually encode real measured timestamps from their frame rates.",
+      "reason_for_selection": "This quote clarifies a common misconception about video timestamp data and highlights the importance of understanding what data is actually encoded.",
+      "context_around_quote": "The speaker explains how consumer cameras produce timestamp data that is not a true measurement, often leading to uniform frame times.",
+      "timestamp_seconds": 1316.4
+    },
+    {
+      "quality": 1000,
+      "text_content": "This pixel, if we were to go in there and measure it actually. Can I do that? I cannot. The value coming off of this is probably pretty close to 255. Like that's fully saturated. If anyone ever does photography. That kind of like that zebra stripes thing, that it will show up if the image is fully washed out is telling you this is the place where the sensor is maxed out.",
+      "reason_for_selection": "Highlights the concept of sensor saturation and the physical limits of digital imaging, which is essential for understanding data quality.",
+      "context_around_quote": "The speaker discusses pixel saturation, brightness levels, and how sensor limitations impact image data.",
+      "timestamp_seconds": 2014.079
+    },
+    {
+      "quality": 1000,
+      "text_content": "It's arbitrary. X and Y. Don't like they could be anything. We just chose those because they're like the weird letters at the end of the Alphabet.",
+      "reason_for_selection": "Emphasizes the arbitrary nature of convention in coordinate systems, illustrating cultural influences on scientific practices.",
+      "context_around_quote": "Discussing how various fields adopt different axes conventions; the choice of X, Y, Z is a matter of tradition rather than correctness.",
+      "timestamp_seconds": 2695.51
+    },
+    {
+      "quality": 1000,
+      "text_content": "If you look at the. Look at. This is the game of look at the video. Take a video on your phone, look straight into the camera and then rotate your head like this. You'll see your eye doing torsion. It'll do like plus or minus 7 degrees.",
+      "reason_for_selection": "Provides a practical demonstration of ocular torsion, making the concept tangible.",
+      "context_around_quote": "This quote is from a segment where the speaker encourages viewers to observe their own eye movements during head rotation.",
+      "timestamp_seconds": 3842.769
+    },
+    {
+      "quality": 1000,
+      "text_content": "You take this huge image data set, and you boil it down into just X and Y, which is much more manageable.",
+      "reason_for_selection": "Captures the essential data reduction process central to the speaker's methodology.",
+      "context_around_quote": "Explaining how raw image data is transformed into low-dimensional features for analysis.",
+      "timestamp_seconds": 0.0
+    },
+    {
+      "quality": 900,
+      "text_content": "Classical computer vision relies on analyzing raw pixel data, like luminance gradients, to identify features such as the sclera, iris, and pupil.",
+      "reason_for_selection": "This quote highlights the fundamental difference between traditional computer vision techniques and modern AI methods, emphasizing the underlying image analysis process.",
+      "context_around_quote": "The speaker contrasts classical methods that analyze pixel luminance directly to detect eye features with deep learning approaches.",
+      "timestamp_seconds": 0.0
+    },
+    {
+      "quality": 850,
+      "text_content": "It's not like the cleanest data for a number of reasons, but it's enough to kind of make the main points that we were trying to make about eye movements.",
+      "reason_for_selection": "Highlights the practical challenges faced in data collection and analysis.",
+      "context_around_quote": "The instructor discusses the quality of the eye tracking data to set realistic expectations for its analysis and visualization.",
+      "timestamp_seconds": 46.07
+    },
+    {
+      "quality": 850,
+      "text_content": "The only pieces of raw Data are the MP4 videos and the timestamps.",
+      "reason_for_selection": "Highlights the core raw data components in eye tracking research.",
+      "context_around_quote": "The speaker explains what constitutes raw data versus processed data, emphasizing the importance of timestamps and video recordings.",
+      "timestamp_seconds": 4962.52
+    },
+    {
+      "quality": 820,
+      "text_content": "The only way that any human has ever gotten good at anything is to do that thing over and over and over again.",
+      "reason_for_selection": "Highlights the importance of practice and iteration in mastering complex skills.",
+      "context_around_quote": "Discussing how expertise in using complex equipment like eye trackers is developed through repeated experience.",
+      "timestamp_seconds": 740.24
+    },
+    {
+      "quality": 750,
+      "text_content": "Basically everything after this line is using the 3D spherical model.",
+      "reason_for_selection": "It summarizes the core topic of this video segment, which is the application of 3D spherical models in eye tracking.",
+      "context_around_quote": "The speaker introduces the use of 3D models for eye tracking, emphasizing the parameters involved and how they relate to the spherical projection of the eye's gaze.",
+      "timestamp_seconds": 5295.72
+    }
+  ],
+  "header": "## SOURCE INFORMATION\n--------------------------------------------------\nSource Type: Local File\nFile Path: C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\2025-08-06-2025 03 17 15 01\\2025-08-06-2025 03 17 15 01.mp4\n--------------------------------------------------\n\n",
+  "video_project": {
+    "video_path": "C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\2025-08-06-2025 03 17 15 01\\2025-08-06-2025 03 17 15 01.mp4",
+    "title": "",
+    "source_type": "file",
+    "source_url": null,
+    "playlist_name": null,
+    "video_id": null,
+    "audio_chunks_folder": "C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\2025-08-06-2025 03 17 15 01\\chunks\\audio_chunks",
+    "transcript_chunks_folder": "C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\2025-08-06-2025 03 17 15 01\\chunks\\transcript_chunks",
+    "analysis_folder": "C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\2025-08-06-2025 03 17 15 01\\chunks\\analysis_chunks",
+    "output_folder": "C:\\Users\\jonma\\syncthing-folders\\jon-alienware-pc-synology-nas-sync\\videos\\video_eater_downloads\\playlists\\[2025-01-Spring] Neural Control of Real-World Human Movement\\video_eater_outputs\\2025-08-06-2025 03 17 15 01_outputs"
+  }
+}

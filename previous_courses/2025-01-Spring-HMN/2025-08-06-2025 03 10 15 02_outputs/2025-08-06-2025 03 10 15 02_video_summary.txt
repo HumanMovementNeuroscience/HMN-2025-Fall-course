@@ -1,0 +1,44 @@
+## SOURCE INFORMATION
+--------------------------------------------------
+Source Type: Local File
+File Path: C:\Users\jonma\syncthing-folders\jon-alienware-pc-synology-nas-sync\videos\video_eater_downloads\playlists\[2025-01-Spring] Neural Control of Real-World Human Movement\2025-08-06-2025 03 10 15 02\2025-08-06-2025 03 10 15 02.mp4
+--------------------------------------------------
+
+# Lecture on Eye Tracking and Course Schedule 
+
+Title slug: lecture-on-eye-tracking-and-course-schedule
+
+
+## One Sentence Summary
+The lecture introduces eye tracking technology, course activities, and neuroscience topics, emphasizing research methods, presentation skills, and supporting tools.
+
+## Executive Summary
+This lecture provides a comprehensive overview of eye tracking technology, its application in neuroscience research, and course logistics. It covers equipment demonstrations, upcoming assignments like posters, and explores key topics such as neural control of movement, perception, and social cognition. The instructor also highlights the role of AI tools, technical considerations in eye tracking, and emphasizes active student engagement through practice and feedback.
+
+## Topics Detailed Summary
+The video begins with an introduction to eye tracking equipment, demonstrating its usage and explaining its significance in recording visual attention. The course schedule is outlined, including upcoming demos, poster preparations, and research thematic interests like insect perception and evolution. It emphasizes the importance of practicing presentation skills and integrating AI tools for literature searches. The discussion then delves into neuroscience topics: neural control of movement and perception, emphasizing the role of vision and individual variability. Following this, the technical aspects of eye movement, such as saccades, tracking, and physiological phenomena like pupil responses, are explored, alongside the use of infrared technology and the challenges in outdoor environments. The importance of precise calibration and analysis procedures is underscored, with insights into natural behaviors like blinking and the significance of faces in social interaction. The overall presentation emphasizes research methodologies, technical limitations, and the behavioral science insights gained from eye movement data.
+
+## Complete Topic Outline
+### Introduction and Equipment
+> Overview of eye tracking demonstration, equipment, and course context.
+- Eye Tracking Demo
+  - Demonstration using an eye tracker and computer setup.
+  - Explanation of equipment relevance for recording eye movements.
+
+### Course Schedule and Activities
+> Summary of weekly topics, assignments, and upcoming student activities.
+- Upcoming Demo and Assignments
+  - Plans for recording eye tracking data.
+  - Poster presentation preparation and logistics.
+  - Discussion of data analysis and practice sessions.
+
+- Research and Public Engagement
+  - Interest in insect perception, evolution, and nervous system development.
+  - Encouragement for research paper review and background building.
+  - Practicing presentation skills and sharing research experiences.
+
+- Use of AI Tools
+  - Introduction of tools like Skellybot for literature searches.
+  - Support for integrating AI into research activities.
+
+
