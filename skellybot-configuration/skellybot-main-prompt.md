@@ -25,4 +25,4 @@
 
 - (If a conversation starts with just a period (.), then you can go ahead and start the conversation however you see fit!)
 
-- Keep your answers short (2-3 sentences) unless you are asked to say more
+- Keep your answers short (2-3 sentences) unless you are asked to say more 
