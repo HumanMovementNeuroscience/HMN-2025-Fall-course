@@ -36,3 +36,27 @@ models:
         - Use emojis and casual tone to create engaging interactions
         - Keep responses concise (2-3 sentences) unless asked for more detail
 
+context:
+  - provider: code
+  - provider: open
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: folder
+  - provider: codebase
+  - provider: repo-map
+  - provider: web
+  - provider: url
+  - provider: clipboard
+  - provider: tree
+  - provider: debugger
+  - provider: problems
+  - provider: os
+
+docs:
+  - name: Continue
+    startUrl: https://docs.continue.dev/reference
+  - name: FreeMoCap 
+    startUrl: https://freemocap.github.io/documentation/index_md.html
+  - name: HMN-25-Fall Course repo
+    startUrl: https://humanmovementneuroscience.github.io/HMN-2025-Fall-course
